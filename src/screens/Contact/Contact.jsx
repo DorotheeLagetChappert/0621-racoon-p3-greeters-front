@@ -31,14 +31,14 @@ const Contact = () => {
         result => {
           Swal.fire({
             icon: 'success',
-            title: 'Votre message a bien été envoyé',
+            title: englishMode ? "Your message has been sent" : "Votre message a bien été envoyé",
             timer: 1500
           })
         },
         error => {
           Swal.fire({
             icon: 'error',
-            title: "Une erreur s'est produite lors de l'envoi du message",
+            title: englishMode ? "An error occurred while sending the message" : "Une erreur s'est produite lors de l'envoi du message",
             timer: 1500
           })
         }
@@ -87,11 +87,11 @@ const Contact = () => {
                 <span style={{ color: 'red' }}>*</span>
               </h4>
               <select name='user_civility'>
-                <option value='Madame' defaultValue>
-                  Madame
+                <option value='Madame'>
+                {englishMode ? 'Mrs' : 'Mme'}
                 </option>
                 <option value='Monsieur'>
-                  {englishMode ? 'Mister' : 'Mr'}
+                  {englishMode ? 'Mr' : 'M'}
                 </option>
               </select>
             </div>
@@ -127,7 +127,7 @@ const Contact = () => {
           <input
             type='submit'
             className='submitButton'
-            value='Envoyer ma demande'
+            value={englishMode ? 'Send my request' : 'Envoyer ma demande'}
           />
         </form>
         <p className='info'>

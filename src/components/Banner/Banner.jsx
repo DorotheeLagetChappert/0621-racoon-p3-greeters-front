@@ -44,7 +44,7 @@ const Banner = () => {
                   {englishMode ? 'Book your journey' : 'Réserver votre balade'}
                 </button>
               </a>
-              <h2 className='banner-text'>Découvrir {d.city_name}</h2>
+              <h2 className='banner-text'>{englishMode ? "Discover" : "Découvrir"} {d.city_name}</h2>
             </div>
           )
           item.push(photo)

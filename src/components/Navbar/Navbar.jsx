@@ -111,7 +111,7 @@ const Navbar = () => {
         </a>
 
         <a
-          href='https://gestion.greeters.fr/visits/new'
+          href='https://greeters.fr/destinations-france/'
           alt=''
           target='_blank'
           rel='noreferrer'

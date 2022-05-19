@@ -55,6 +55,9 @@
 .sousTitre {
 margin: 20px;
 }
+.Info li {
+  color: black;
+}
 .Info li a {
   text-decoration: none;
   color: black;

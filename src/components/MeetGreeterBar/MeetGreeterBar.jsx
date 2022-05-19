@@ -1,7 +1,8 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useContext } from 'react'
 import axios from 'axios'
 import makeAnimated from 'react-select/animated'
 import Select from 'react-select'
+import { LangueContext } from '../../context/langueContext'
 
 import GreetersPaginationFiltered from '../../components/GreetersPaginationFiltered/GreetersPaginationFiltered'
 
@@ -62,6 +63,9 @@ const MeetGreeterBar = () => {
   const [selectedOptionsThem, setSelectedOptionsThem] = useState([])
   const [selectedOptionsLang, setSelectedOptionsLang] = useState([])
 
+  //languages
+  const language = useContext(LangueContext)
+  const englishMode = language.state.englishMode
   // fetch all thematics from data
 
   useEffect(() => {
@@ -123,11 +127,11 @@ const MeetGreeterBar = () => {
                 label: thematic_name_fr
               }))}
             className='meet-select'
-            placeholder='Thématiques'
+            placeholder={englishMode ? 'Thematics' : 'Thématiques'}
             isMulti
             autoFocus
             isSearchable
-            noOptionsMessage={() => 'tous les thèmes sont déja sélectionnés'}
+            noOptionsMessage={() =>{englishMode ? 'All themes are already selected' : 'Tous les thèmes sont déja sélectionnés'}}
           />
           <Select
             styles={customStyles}
@@ -138,11 +142,11 @@ const MeetGreeterBar = () => {
               label: city_name
             }))}
             className='meet-select'
-            placeholder='Villes'
+            placeholder={englishMode ? 'Cities' : 'Villes'}
             isMulti
             autoFocus
             isSearchable
-            noOptionsMessage={() => 'toutes les villes sont déja sélectionnées'}
+            noOptionsMessage={() => {englishMode ? 'All cities are already selected' : 'Toutes les villes sont déja sélectionnées'}}
           />
           <Select
             styles={customStyles}
@@ -153,12 +157,12 @@ const MeetGreeterBar = () => {
               label: language_name_fr
             }))}
             className='meet-select'
-            placeholder='Langues'
+            placeholder={englishMode ? 'Languages' : 'Langues'}
             isMulti
             autoFocus
             isSearchable
             noOptionsMessage={() =>
-              'toutes les langues sont déja sélectionnées'
+              {englishMode ? 'All languages are already selected' : 'Toutes les langues sont déja sélectionnées'}
             }
           />
         </div>

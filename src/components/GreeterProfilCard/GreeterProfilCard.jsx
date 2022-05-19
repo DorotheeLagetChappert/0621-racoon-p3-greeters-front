@@ -19,7 +19,7 @@ const GreeterProfilCard = props => {
           : props.result[0].person_catch_phrase_fr}
       </h3>
       <a
-        href='https://gestion.greeters.fr/visits/new'
+        href='https://greeters.fr/destinations-france/'
         target='_blank'
         rel='noreferrer'
         className='greeter-profil-bloc-card-btn-a'

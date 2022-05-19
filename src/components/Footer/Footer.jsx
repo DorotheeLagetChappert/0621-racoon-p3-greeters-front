@@ -105,7 +105,7 @@ const Footer = () => {
             <ul className='Info 2'>
               <li></li>
               <li>
-                <a href='/'>{englishMode ? 'home' : 'Accueil'}</a>
+                <a href='/'>{englishMode ? 'Home' : 'Accueil'}</a>
               </li>
               <li>
                 <a href='/meetgreeter'>
@@ -113,7 +113,7 @@ const Footer = () => {
                 </a>
               </li>
               <a
-                href='https://gestion.greeters.fr/visits/new'
+                href='https://greeters.fr/destinations-france/'
                 target='_blank'
                 rel='noreferrer'
               >
@@ -174,7 +174,7 @@ const Footer = () => {
                   target='_blank'
                   rel='noreferrer'
                 >
-                  {englishMode ? 'train station' : 'Gare SNCF'}
+                  {englishMode ? 'Train station' : 'Gare SNCF'}
                 </a>
               </li>
               <li>
@@ -183,7 +183,7 @@ const Footer = () => {
                   target='_blank'
                   rel='noreferrer'
                 >
-                  {englishMode ? 'exchange office' : 'Bureau de change'}
+                  {englishMode ? 'Exchange office' : 'Bureau de change'}
                 </a>
               </li>
               <li>
